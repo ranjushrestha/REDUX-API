@@ -1,4 +1,4 @@
-import React, { useState, type ChangeEvent } from "react";
+import { useState, type ChangeEvent } from "react";
 import { useDispatch } from "react-redux";
 import { setQuery } from "../redux/features/searchSlice";
 

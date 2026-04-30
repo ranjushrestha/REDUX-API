@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import type { MediaItem } from "../../types/constants";
 
 const searchSlice = createSlice({
   name: "search",
   initialState: {
     query: "",
     activeTab: "photos",
-    results: [],
+    results: [] as MediaItem[],
     loading: false,
     error: null,
   },

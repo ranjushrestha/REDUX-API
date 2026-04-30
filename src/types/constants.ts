@@ -4,6 +4,9 @@ export type UnsplashPhoto = {
     urls:{
         small: string,
         full: string
+    },
+    links: {
+      html: string
     }
 }
 
@@ -16,6 +19,7 @@ export type PexelsVideo = {
     link: string;
   }[];
   image: string;
+  url: string
 };
 
 // Unified UI type
@@ -25,4 +29,5 @@ export type MediaItem = {
   title: string | null;
   thumbnail: string;
   src: string;
+  url?: string;
 };

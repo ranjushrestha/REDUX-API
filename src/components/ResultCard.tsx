@@ -1,16 +1,17 @@
+import { useDispatch } from "react-redux";
 import type { MediaItem } from "../types/constants";
+import {addCollection} from '../redux/features/collectionSlice'
+import type { AppDispatch } from "../redux/store";
 
 type Prop = {
   result: MediaItem;
 };
 const ResultCard = ({ result }: Prop) => {
+    const dispatch = useDispatch<AppDispatch>()
 
     const addToCollection = (result: MediaItem) => {
-      const oldData = localStorage.getItem('collection')  
-      const parseData = oldData ? JSON.parse(oldData) : []
-      const newData = [...parseData, result]
-      localStorage.setItem('collection', JSON.stringify(newData))
-      console.log(newData)
+   
+     dispatch(addCollection(result))
     }
 
   return (

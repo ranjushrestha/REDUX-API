@@ -50,7 +50,6 @@ const ResultGrid = () => {
         }
 
         dispatch(setResults(data));
-        console.log(data);
       } catch (err) {
         dispatch(setError("failed to fetch"));
       }
